@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.sebisoftworks.festrechnerolympia.MainActivity"
+    tools:layout_editor_absoluteY="89dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+    <Button
+        android:id="@+id/buttonBier"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Bier\n2,00€"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWeinschorle"
+        app:layout_constraintRight_toLeftOf="@+id/buttonBierOhne"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonBierOhne"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Bier alkoholfrei\n2,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonRadler"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGlasWeiß"
+        app:layout_constraintLeft_toRightOf="@+id/buttonBier"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonRadler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Radler\n2,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonAeppler"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGlasRot"
+        app:layout_constraintLeft_toRightOf="@+id/buttonBierOhne"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:id="@+id/buttonAeppler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Äppler\n2,00€"
+        app:layout_constraintBottom_toTopOf="@+id/buttonGlasSekt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonRadler"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonWeinschorle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Weinschorle\n2,50€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonGlasWeiß"
+        app:layout_constraintBottom_toTopOf="@+id/buttonWasser"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBier" />
+    <Button
+        android:id="@+id/buttonGlasWeiß"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Glas Weiswein\n3,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonGlasRot"
+        app:layout_constraintBottom_toTopOf="@+id/buttonCola"
+        app:layout_constraintLeft_toRightOf="@+id/buttonWeinschorle"
+        app:layout_constraintTop_toBottomOf="@+id/buttonBierOhne" />
+    <Button
+        android:id="@+id/buttonGlasRot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Glas Rotwein\n3,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonGlasSekt"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFanta"
+        app:layout_constraintLeft_toRightOf="@+id/buttonGlasWeiß"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRadler" />
+    <Button
+        android:id="@+id/buttonGlasSekt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Glas Sekt\n2,00€"
+        app:layout_constraintBottom_toTopOf="@+id/buttonApfelschorle"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonGlasRot"
+        app:layout_constraintTop_toBottomOf="@+id/buttonAeppler" />
+
+    <Button
+        android:id="@+id/buttonWasser"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Wasser\n1,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonCola"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFlascheWeiß"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWeinschorle" />
+    <Button
+        android:id="@+id/buttonCola"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Cola\n1,50€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonFanta"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFlascheRot"
+        app:layout_constraintLeft_toRightOf="@+id/buttonWasser"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGlasWeiß" />
+    <Button
+        android:id="@+id/buttonFanta"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Fanta\n1,50€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonApfelschorle"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFlascheRose"
+        app:layout_constraintLeft_toRightOf="@+id/buttonCola"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGlasRot" />
+
+    <Button
+        android:id="@+id/buttonApfelschorle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:elevation="0dp"
+        android:text="Apfelschorle\n2,00€"
+        app:layout_constraintBottom_toTopOf="@+id/buttonFlascheSekt"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonFanta"
+        app:layout_constraintTop_toBottomOf="@+id/buttonGlasSekt" />
+
+    <Button
+        android:id="@+id/buttonFlascheWeiß"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Flasche Weiswein\n10,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonFlascheRot"
+        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonWasser" />
+    <Button
+        android:id="@+id/buttonFlascheRot"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Flache Rotwein\n10,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonFlascheRose"
+        app:layout_constraintLeft_toRightOf="@+id/buttonFlascheWeiß"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonCola" />
+    <Button
+        android:id="@+id/buttonFlascheRose"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Flasche Roséwein\n10,00€"
+        app:layout_constraintRight_toLeftOf="@+id/buttonFlascheSekt"
+        app:layout_constraintLeft_toRightOf="@+id/buttonFlascheRot"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonFanta" />
+
+    <Button
+        android:id="@+id/buttonFlascheSekt"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Flasche Sekt\n12,00€"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/buttonFlascheRose"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonApfelschorle" />
+    
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="484dp"
+        android:layout_height="127dp"
+        android:text="Nächster Kunde"
+        tools:layout_editor_absoluteY="488dp"
+        app:layout_constraintRight_toLeftOf="@+id/buttonFlascheWeiß"
+        android:layout_marginRight="4dp" />
+
+    <TextView
+        android:id="@+id/TXTSumme"
+        android:layout_width="469dp"
+        android:layout_height="418dp"
+        app:layout_constraintRight_toLeftOf="@+id/buttonWeinschorle"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
+        app:layout_constraintTop_toTopOf="@+id/buttonBier"
+        android:layout_marginTop="8dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+</android.support.constraint.ConstraintLayout>
