@@ -16,7 +16,7 @@
         android:text="Bier\n2,00€"
         app:layout_constraintBottom_toTopOf="@+id/buttonWeinschorle"
         app:layout_constraintRight_toLeftOf="@+id/buttonBierOhne"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineV1"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
         android:id="@+id/buttonBierOhne"
@@ -53,7 +53,7 @@
         android:text="Weinschorle\n2,50€"
         app:layout_constraintRight_toLeftOf="@+id/buttonGlasWeiß"
         app:layout_constraintBottom_toTopOf="@+id/buttonWasser"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineV1"
         app:layout_constraintTop_toBottomOf="@+id/buttonBier" />
     <Button
         android:id="@+id/buttonGlasWeiß"
@@ -90,7 +90,7 @@
         android:text="Wasser\n1,00€"
         app:layout_constraintRight_toLeftOf="@+id/buttonCola"
         app:layout_constraintBottom_toTopOf="@+id/buttonFlascheWeiß"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineV1"
         app:layout_constraintTop_toBottomOf="@+id/buttonWeinschorle" />
     <Button
         android:id="@+id/buttonCola"
@@ -128,7 +128,7 @@
         android:layout_height="0dp"
         android:text="Flasche Weiswein\n10,00€"
         app:layout_constraintRight_toLeftOf="@+id/buttonFlascheRot"
-        app:layout_constraintLeft_toLeftOf="@+id/guideline2"
+        app:layout_constraintLeft_toLeftOf="@+id/guidelineV1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonWasser" />
     <Button
@@ -160,31 +160,64 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/buttonApfelschorle" />
     
-    <Button
-        android:id="@+id/buttonClear"
-        android:layout_width="484dp"
-        android:layout_height="127dp"
-        android:text="Nächster Kunde"
-        tools:layout_editor_absoluteY="488dp"
-        app:layout_constraintRight_toLeftOf="@+id/buttonFlascheWeiß"
-        android:layout_marginRight="4dp" />
 
-    <TextView
-        android:id="@+id/TXTSumme"
-        android:layout_width="469dp"
-        android:layout_height="418dp"
-        app:layout_constraintRight_toLeftOf="@+id/buttonWeinschorle"
-        android:layout_marginRight="8dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonClear"
-        app:layout_constraintTop_toTopOf="@+id/buttonBier"
-        android:layout_marginTop="8dp" />
+
+
 
     <android.support.constraint.Guideline
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/guideline2"
+        android:id="@+id/guidelineV1"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.50" />
+        app:layout_constraintGuide_percent="0.5"
+         />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="TextView"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineV1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"  />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="Nächster Kunde"
+        tools:layout_editor_absoluteY="106dp"
+        tools:layout_editor_absoluteX="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineH2"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineV1" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineH1"
+        app:layout_constraintGuide_begin="283dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.15"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guidelineH2"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85"/>
+
+    <ListView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/guidelineH2"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineH1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/guidelineV1"
+        />
+
 
 </android.support.constraint.ConstraintLayout>
