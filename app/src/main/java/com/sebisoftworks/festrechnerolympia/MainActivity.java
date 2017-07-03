@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         txtView = (TextView) findViewById(R.id.textView);
-        int ad=5;
         bier = (Button) findViewById(R.id.buttonBier);
         alkf = (Button) findViewById(R.id.buttonBierOhne);
         radler = (Button) findViewById(R.id.buttonRadler);
