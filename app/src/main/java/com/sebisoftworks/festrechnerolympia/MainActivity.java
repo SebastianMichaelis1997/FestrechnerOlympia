@@ -3,15 +3,31 @@ package com.sebisoftworks.festrechnerolympia;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     Button bier, alkf, radler, aeppler, wschorle, glasww, glasrw, glassekt, wasser, cola, fanta, aschorl, flaschww,
             flaschrw, flaschrow, flaschsekt, clear;
+
     TextView txtView;
 
+    String[] waren = new String[66];
+
+    ListView listView;
+
     double sum = 0;
+    final List<String> ListElementsArrayList = new ArrayList<String>(Arrays.asList(waren));
+
+
+    final ArrayAdapter<String> adapter = new ArrayAdapter<String>
+            (MainActivity.this, android.R.layout.simple_list_item_1, ListElementsArrayList);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,11 +53,18 @@ public class MainActivity extends AppCompatActivity {
         flaschsekt = (Button) findViewById(R.id.buttonFlascheSekt);
         clear = (Button) findViewById(R.id.buttonClear);
 
+        listView = (ListView) findViewById(R.id.ListView);
+
+
+        listView.setAdapter(adapter);
+
         clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 sum = 0;
-                txtView.setText(sum + "€");
+               // txtView.setText(sum + "€");
+                char[] hans = {'a','b', 'v'};
+                txtView.setText(hans, 0, 3);
             }
         });
         bier.setOnClickListener(new View.OnClickListener() {
@@ -140,10 +163,19 @@ public class MainActivity extends AppCompatActivity {
                 add(12);
             }
         });
+
+
     }
 
     private void add(double i) {
         sum += i;
-        txtView.setText(sum + "€");
+        //txtView.setText(sum + "€");
+        char[] hans = {'c','r', 'a'};
+        txtView.setText(hans, 0, 3);
+        ListElementsArrayList.add("Bier 3,50");
+
+        adapter.notifyDataSetChanged();
+
+
     }
 }
