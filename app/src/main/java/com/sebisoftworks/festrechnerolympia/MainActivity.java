@@ -1,5 +1,6 @@
 package com.sebisoftworks.festrechnerolympia;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -23,16 +24,22 @@ public class MainActivity extends AppCompatActivity {
     ListView listView;
 
     double sum = 0;
-    final List<String> ListElementsArrayList = new ArrayList<String>(Arrays.asList(waren));
+    final List<String> ListElementsArrayList = new ArrayList<String>();
 
+    @Override
+    public void onConfigurationChanged(Configuration c) {
+        super.onConfigurationChanged(c);
+    }
 
-    final ArrayAdapter<String> adapter = new ArrayAdapter<String>
-            (MainActivity.this, android.R.layout.simple_list_item_1, ListElementsArrayList);
+    ArrayAdapter<String> adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        adapter = new ArrayAdapter<String>
+                (MainActivity.this, android.R.layout.simple_list_item_1, ListElementsArrayList);
 
         txtView = (TextView) findViewById(R.id.textView);
         bier = (Button) findViewById(R.id.buttonBier);
@@ -62,8 +69,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 sum = 0;
-               // txtView.setText(sum + "€");
-                char[] hans = {'a','b', 'v'};
+                // txtView.setText(sum + "€");
+                char[] hans = {'a', 'b', 'v'};
                 txtView.setText(hans, 0, 3);
             }
         });
@@ -170,7 +177,7 @@ public class MainActivity extends AppCompatActivity {
     private void add(double i) {
         sum += i;
         //txtView.setText(sum + "€");
-        char[] hans = {'c','r', 'a'};
+        char[] hans = {'c', 'r', 'a'};
         txtView.setText(hans, 0, 3);
         ListElementsArrayList.add("Bier 3,50");
 
